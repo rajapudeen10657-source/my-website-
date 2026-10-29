@@ -1,0 +1,271 @@
+
+/* ===== DEEN PERSONAL WEBSITE ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1020;
+    color: white;
+}
+
+/* ===== NAVIGATION ===== */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #11182d;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #00f5d4;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00f5d4;
+}
+
+/* ===== HOME SECTION ===== */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 10%;
+    gap: 40px;
+}
+
+.hero-text {
+    max-width: 600px;
+    animation: slideIn 1s ease;
+}
+
+.hero h3 {
+    color: #00f5d4;
+    font-size: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 78px);
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #00f5d4;
+}
+
+.hero p {
+    color: #bdc7dc;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* ===== BUTTON ===== */
+
+.btn {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 14px 28px;
+    background: #00f5d4;
+    color: #0b1020;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+/* ===== PROFILE CIRCLE ===== */
+
+.profile {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00f5d4, #7857ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    font-weight: bold;
+    color: #0b1020;
+    box-shadow: 0 0 55px #00f5d455;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ===== GENERAL SECTIONS ===== */
+
+section {
+    padding: 75px 10%;
+}
+
+.section-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    color: #00f5d4;
+}
+
+/* ===== ABOUT SECTION ===== */
+
+.about {
+    background: #11182d;
+    text-align: center;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: #bdc7dc;
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+/* ===== SKILLS AND PROJECTS ===== */
+
+.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: #151e35;
+    border: 1px solid #263452;
+    border-radius: 18px;
+    padding: 30px 22px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #00f5d4;
+    box-shadow: 0 10px 35px #00f5d415;
+}
+
+.card .icon {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    color: #00f5d4;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #bdc7dc;
+    line-height: 1.7;
+}
+
+/* ===== CONTACT SECTION ===== */
+
+.contact {
+    background: #11182d;
+    text-align: center;
+}
+
+.contact p {
+    color: #bdc7dc;
+    line-height: 1.8;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #bdc7dc;
+    background: #080c17;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width: 650px) {
+    nav {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 14px;
+    }
+
+    .hero {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .profile {
+        width: 210px;
+        height: 210px;
+        font-size: 75px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+}
